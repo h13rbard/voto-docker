@@ -1,2 +1,8 @@
-- name: Health check
-  run: curl -f http://localhost:8080
+name: status check
+on: [push]
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Run curl
+        run: curl -f http://localhost:3000
