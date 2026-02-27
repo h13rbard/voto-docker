@@ -1,0 +1,17 @@
+services:
+  vote:
+    ports:
+      - "80:80"
+    restart: always
+
+  result:
+    restart: always
+
+  worker:
+    restart: always
+
+  redis:
+    restart: always
+
+  database:
+    restart: always

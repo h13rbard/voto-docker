@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+name: Deploy Staging
+=======
+name: Deploy Local Staging
+>>>>>>> af75f2de82505caff740ff2b5efdc67d544ff8a4
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+<<<<<<< HEAD
+    runs-on: [self-hosted, staging]
+=======
+    runs-on: self-hosted
+>>>>>>> af75f2de82505caff740ff2b5efdc67d544ff8a4
+
+    steps:
+      - uses: actions/checkout@v4
+
+<<<<<<< HEAD
+      - run: |
+=======
+      - name: Deploy locally
+        run: |
+>>>>>>> af75f2de82505caff740ff2b5efdc67d544ff8a4
+          docker compose \
+            --env-file .env.staging \
+            -f docker-compose.yml \
+            -f docker-compose.staging.yml \
+            up -d --build

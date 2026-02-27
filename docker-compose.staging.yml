@@ -1,0 +1,16 @@
+services:
+  vote:
+    ports:
+      - "8080:80"
+
+  result:
+    ports:
+      - "3000:3000"
+
+  redis:
+    ports:
+      - "6379:6379"
+
+  database:
+    ports:
+      - "5432:5432"

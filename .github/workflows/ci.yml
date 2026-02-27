@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "develop"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Validate docker compose
+        run: docker compose config
+
+      - name: Build images
+        run: docker compose build
+
+      - name: Start services
+        run: docker compose up -d
+
+      - name: Wait for services
+        run: sleep 20
+
+      - name: Check containers running
+        run: docker ps
