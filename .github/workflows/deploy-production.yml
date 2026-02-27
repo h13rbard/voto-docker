@@ -12,7 +12,7 @@ jobs:
 
       - run: |
           docker compose \
-            --env-file .env.prod \
+            --env-file /srv/voto-docker/.env.prod \
             -f docker-compose.yml \
             -f docker-compose.prod.yml \
             up -d --build
