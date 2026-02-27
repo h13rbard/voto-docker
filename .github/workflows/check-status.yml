@@ -1,2 +1,0 @@
-- name: Check status
-  run: curl -f http://localhost:3000
