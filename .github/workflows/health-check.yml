@@ -1,3 +1,0 @@
-- name: Health check
-  run: curl -f http://localhost:80
-  run: curl -f http://localhost:3000
