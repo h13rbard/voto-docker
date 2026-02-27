@@ -1,0 +1,2 @@
+- name: Health check
+  run: curl -f http://localhost:8080
