@@ -36,3 +36,37 @@ htmlcov/
 .vscode/
 .idea/
 *.swp
+
+# --- Terraform/Workflow ---
+# Archivos de estado local
+*.tfstate
+*.tfstate.*
+
+# Planes de Terraform
+*.tfplan
+
+# Directorio de plugins
+.terraform/
+.terraform.lock.hcl
+
+# Variables con secrets
+terraform.tfvars
+*.auto.tfvars
+
+# Archivos de logs
+*.log
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Certificados y llaves
+*.pem
+*.key
+*.crt
